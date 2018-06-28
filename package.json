@@ -1,0 +1,27 @@
+{
+  "name": "robot-house",
+  "version": "0.9.9",
+  "description": "⊂_ヽ\r     　 ＼＼  Λ＿Λ\r     　　 ＼( 'ㅅ' ) ROBOT\r     　　　 >　⌒ヽ\r     　　　/ 　 へ＼\r     　　 /　　/　＼＼\r     　　 ﾚ　ノ　　 ヽ_つ\r     　　/　/ HOUSE\r     　 /　/|\r     　(　(ヽ\r     　|　|、＼\r     　| 丿 ＼ ⌒)\r     　| |　　) /\r     `ノ )　　Lﾉ",
+  "main": "app.js",
+  "dependencies": {
+    "give-me-a-joke": "^0.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AaronAcerboni/robot-house.git"
+  },
+  "keywords": [
+    "smart",
+    "house"
+  ],
+  "author": "aaron and simon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AaronAcerboni/robot-house/issues"
+  },
+  "homepage": "https://github.com/AaronAcerboni/robot-house#readme"
+}
