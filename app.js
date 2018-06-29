@@ -23,7 +23,8 @@
 */
 
 const jokes = require('./lib/jokes');
-const say   = require('say-promise');
+const wordOfTheDay = require('./lib/word-of-the-day');
+const say = require('say-promise');
 
 /*
 
@@ -35,10 +36,31 @@ const say   = require('say-promise');
 
 */
 
-say
-    .speak('Let me tell you a joke!')
-    .then (() => {
-        jokes.getJoke().then(joke => {
-            say.speak(joke);
-        })
-    })
+//tellJoke();
+tellWordOfTheDay();
+
+/*
+
+---------------------------------------------
+|                                           |
+|   HELPER FUNCTIONS                        |
+|                                           |
+---------------------------------------------
+
+*/
+
+function tellJoke() {
+    jokes.getJoke()
+        .then(joke => {
+            say.speak('Let me tell you a joke!')
+                .then(() => say.speak(joke))
+        });
+}
+
+function tellWordOfTheDay() {
+    wordOfTheDay.getTodaysWord()
+        .then(wordData => {
+            say.speak('The word of the day is' + wordData.word)
+                .then(() => say.speak('which means ' + wordData.meaning))
+        });
+}
