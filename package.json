@@ -4,9 +4,12 @@
   "description": "Enhance your living with robot house ",
   "main": "app.js",
   "dependencies": {
+    "bingspeech-api-client": "^2.5.0",
     "give-me-a-joke": "^0.1.2",
+    "mic-to-speech": "^1.0.1",
     "node-run-cmd": "^1.0.1",
-    "say-promise": "0.0.2"
+    "say-promise": "0.0.2",
+    "sync-exec": "^0.6.2"
   },
   "devDependencies": {},
   "scripts": {
