@@ -22,7 +22,7 @@
 
 */
 
-const jokes = require('./jokes');
+const jokes = require('./lib/jokes');
 const say   = require('say-promise');
 
 /*
