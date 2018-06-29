@@ -1,12 +1,44 @@
-var jokes = require('./jokes');
+/*
+            ⊂_ヽ
+            　 ＼＼  Λ＿Λ
+            　　 ＼( 'ㅅ' ) ROBOT
+            　　　 >　⌒ヽ
+            　　　/ 　 へ＼
+            　　 /　　/　＼＼
+            　　 ﾚ　ノ　　 ヽ_つ
+            　　/　/ HOUSE
+            　 /　/|
+            　(　(ヽ
+            　|　|、＼
+            　| 丿 ＼ ⌒)
+            　| |　　) /
+            `ノ )　　Lﾉ 
 
-require('say-promise')
+---------------------------------------------
+|                                           |
+|   REQUIRED MODULES                        |
+|                                           |
+---------------------------------------------
+
+*/
+
+const jokes = require('./jokes');
+const say   = require('say-promise');
+
+/*
+
+---------------------------------------------
+|                                           |
+|   MAIN                                    |
+|                                           |
+---------------------------------------------
+
+*/
+
+say
     .speak('Let me tell you a joke!')
-    .then(sayJoke)
-
-function sayJoke () {
-    jokes.getJoke().then(joke => {
-        require('say-promise').speak(joke);
-        console.log(joke)
-    });
-}
+    .then (() => {
+        jokes.getJoke().then(joke => {
+            say.speak(joke);
+        })
+    })
