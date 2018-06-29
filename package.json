@@ -1,10 +1,12 @@
 {
   "name": "robot-house",
   "version": "0.9.9",
-  "description": "⊂_ヽ\r     　 ＼＼  Λ＿Λ\r     　　 ＼( 'ㅅ' ) ROBOT\r     　　　 >　⌒ヽ\r     　　　/ 　 へ＼\r     　　 /　　/　＼＼\r     　　 ﾚ　ノ　　 ヽ_つ\r     　　/　/ HOUSE\r     　 /　/|\r     　(　(ヽ\r     　|　|、＼\r     　| 丿 ＼ ⌒)\r     　| |　　) /\r     `ノ )　　Lﾉ",
+  "description": "Enhance your living with robot house ",
   "main": "app.js",
   "dependencies": {
-    "give-me-a-joke": "^0.1.2"
+    "give-me-a-joke": "^0.1.2",
+    "node-run-cmd": "^1.0.1",
+    "say-promise": "0.0.2"
   },
   "devDependencies": {},
   "scripts": {
@@ -15,8 +17,10 @@
     "url": "git+https://github.com/AaronAcerboni/robot-house.git"
   },
   "keywords": [
-    "smart",
-    "house"
+    "home-automation",
+    "smarthome",
+    "smart-home",
+    "wifi-lightbulb "
   ],
   "author": "aaron and simon",
   "license": "ISC",
