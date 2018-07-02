@@ -37,7 +37,7 @@ const say        = require('say-promise');
 
 if (Math.random() > 0.33) {
     let ___R_O_B_O_T________H_O_U_S_E___ = new RobotHouse('./config.json');
-    ___R_O_B_O_T________H_O_U_S_E___.tellNumber();
+    ___R_O_B_O_T________H_O_U_S_E___.laugh();
 } else {
     say.speak('You were not successful running robot house')
     console.log('You were not successful running robot house!')
