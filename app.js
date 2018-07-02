@@ -1,18 +1,18 @@
 /*
-            ⊂_ヽ
-            　 ＼＼  Λ＿Λ
-            　　 ＼( 'ㅅ' ) ROBOT
-            　　　 >　⌒ヽ
-            　　　/ 　 へ＼
-            　　 /　　/　＼＼
-            　　 ﾚ　ノ　　 ヽ_つ
-            　　/　/ HOUSE
-            　 /　/|
-            　(　(ヽ
-            　|　|、＼
-            　| 丿 ＼ ⌒)
-            　| |　　) /
-            `ノ )　　Lﾉ 
+                ⊂_ヽ
+                　 ＼＼ _____
+                　　 ＼| '.' | ROBOT
+                　　　 >　⌒ヽ
+                　　　/ 　 へ＼
+                　　 /　　/　＼＼
+                　　 ﾚ　ノ　　 ヽ_つ
+                　　/　/ HOUSE
+                　 /　/|
+                　(　(ヽ
+                　|　|、＼
+                　| 丿 ＼ ⌒)
+                　| |　　) /
+                `ノ )　　Lﾉ
 
 ---------------------------------------------
 |                                           |
@@ -22,9 +22,8 @@
 
 */
 
-const jokes = require('./lib/jokes');
-const wordOfTheDay = require('./lib/word-of-the-day');
-const say = require('say-promise');
+const RobotHouse = require('./lib/RobotHouse')
+const say        = require('say-promise');
 
 /*
 
@@ -36,31 +35,10 @@ const say = require('say-promise');
 
 */
 
-//tellJoke();
-tellWordOfTheDay();
-
-/*
-
----------------------------------------------
-|                                           |
-|   HELPER FUNCTIONS                        |
-|                                           |
----------------------------------------------
-
-*/
-
-function tellJoke() {
-    jokes.getJoke()
-        .then(joke => {
-            say.speak('Let me tell you a joke!')
-                .then(() => say.speak(joke))
-        });
-}
-
-function tellWordOfTheDay() {
-    wordOfTheDay.getTodaysWord()
-        .then(wordData => {
-            say.speak('The word of the day is' + wordData.word)
-                .then(() => say.speak('which means ' + wordData.meaning))
-        });
+if (Math.random() > 0.33) {
+    let ___R_O_B_O_T________H_O_U_S_E___ = new RobotHouse('./config.json');
+    ___R_O_B_O_T________H_O_U_S_E___.tellFact();
+} else {
+    say.speak('You were not successful running robot house')
+    console.log('You were not successful running robot house!')
 }
