@@ -49,6 +49,5 @@ if (Math.random() > 0.33) {
     let ___R_O_B_O_T________H_O_U_S_E___ = new RobotHouse('./config.json');
     setInterval(live, 30);
 } else {
-    say.speak('You were not successful running robot house')
-    console.log('You were not successful running robot house!')
+    say.speak('You were not successful running robot house');
 }
