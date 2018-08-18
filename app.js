@@ -24,6 +24,7 @@
 
 const jokes = require('./lib/jokes');
 const wordOfTheDay = require('./lib/word-of-the-day');
+const sentence = require('./lib/sentence');
 const say = require('say-promise');
 
 /*
@@ -37,7 +38,8 @@ const say = require('say-promise');
 */
 
 //tellJoke();
-tellWordOfTheDay();
+//tellWordOfTheDay();
+tellRandomSentence();
 
 /*
 
@@ -51,16 +53,19 @@ tellWordOfTheDay();
 
 function tellJoke() {
     jokes.getJoke()
-        .then(joke => {
-            say.speak('Let me tell you a joke!')
-                .then(() => say.speak(joke))
-        });
+        .then(joke => say.speak('Let me tell you a joke!')
+            .then(() => say.speak(joke))
+        );
 }
 
 function tellWordOfTheDay() {
     wordOfTheDay.getTodaysWord()
-        .then(wordData => {
-            say.speak('The word of the day is' + wordData.word)
-                .then(() => say.speak('which means ' + wordData.meaning))
-        });
+        .then(wordData => say.speak('The word of the day is' + wordData.word)
+            .then(() => say.speak('which means ' + wordData.meaning))
+        );
+}
+
+function tellRandomSentence() {
+    sentence.getSentence()
+        .then(sentence => say.speak(sentence));
 }
