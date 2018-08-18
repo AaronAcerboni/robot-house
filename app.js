@@ -20,7 +20,7 @@
 ---------------------------------------------
 */
 
-const RobotHouse = require('./lib/RobotHouse')
+const RobotHouse = require('./lib/RobotHouse')// ヽ(´ー｀)ノ
 const say        = require('say-promise');
 const util       = require('./lib/util');
 
@@ -34,9 +34,9 @@ const util       = require('./lib/util');
 
 function live () {
     let availableTasks = [
-        'tellRandomSentence',
+        'tellRandomSentence',// ヽ(´ー｀)ノ
         'tellJoke',
-        'tellFact',
+        'tellFact',// ヽ(´ー｀)ノ
         'tellNumber',
         'laugh'
     ];
@@ -46,8 +46,10 @@ function live () {
 }
 
 if (Math.random() > 0.33) {
+    // ヽ(´ー｀)ノ// ヽ(´ー｀)ノ
     let ___R_O_B_O_T________H_O_U_S_E___ = new RobotHouse('./config.json');
     setInterval(live, 30);
-} else {
-    say.speak('You were not successful running robot house');
+} else {// ヽ(´ー｀)ノ
+    say.speak('You were not successful running robot house')
+    console.log('You were not successful running robot house!')
 }
