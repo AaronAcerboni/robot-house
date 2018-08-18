@@ -33,10 +33,15 @@ const util       = require('./lib/util');
 */
 
 function live () {
-    let tasks = ['tellRandomSentence', 'tellJoke', 'tellFact', 'tellNumber',
-     'laugh'];
-    if (Math.random < 0.1) {
-        ___R_O_B_O_T________H_O_U_S_E___[util.rArr(tasks)]();
+    let availableTasks = [
+        'tellRandomSentence',
+        'tellJoke',
+        'tellFact',
+        'tellNumber',
+        'laugh'
+    ];
+    if (Math.random < 0.05) {
+        ___R_O_B_O_T________H_O_U_S_E___[util.rArr(availableTasks)]();
     }
 }
 
