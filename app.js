@@ -22,6 +22,7 @@
 
 const RobotHouse = require('./lib/RobotHouse')
 const say        = require('say-promise');
+const util       = require('./lib/util');
 
 /*
 ---------------------------------------------
@@ -31,9 +32,17 @@ const say        = require('say-promise');
 ---------------------------------------------
 */
 
+function live () {
+    let tasks = ['tellRandomSentence', 'tellJoke', 'tellFact', 'tellNumber',
+     'laugh'];
+    if (Math.random < 0.1) {
+        ___R_O_B_O_T________H_O_U_S_E___[util.rArr(tasks)]();
+    }
+}
+
 if (Math.random() > 0.33) {
     let ___R_O_B_O_T________H_O_U_S_E___ = new RobotHouse('./config.json');
-    ___R_O_B_O_T________H_O_U_S_E___.tellRandomSentence();
+    setInterval(live, 30);
 } else {
     say.speak('You were not successful running robot house')
     console.log('You were not successful running robot house!')
